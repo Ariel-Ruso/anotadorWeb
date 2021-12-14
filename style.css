@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@font-face {
+  font-family: FontAwe;
+  src: url(./assets/fontawesome-free-5.15.4-web/webfonts/fa-solid-900.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Permanent', 'san serif';
+  padding: 2%;
+  height: 100vh;
+  background-image: url("./assets/fondo.jpg");
+  background-size: 100%;
+  overflow: hidden;
+}
+
+body h1 {
+  font-size: 2.5em;
+}
+
+body h2 {
+  font-size: 1.5em;
+}
+
+body main {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 4%;
+  padding: 3% 4%;
+}
+
+body main button {
+  background-color: #ce6979;
+  color: #f9f3ed 2px solid;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 1%;
+}
+
+body main button:hover {
+  cursor: pointer;
+  background-color: #ffa2b2;
+  border: #ffa2b2 2px solid;
+}
+
+body main button.add::before {
+  font-family: FontAwe;
+  content: "\f055";
+}
+
+body main button.edit::before {
+  font-family: FontAwe;
+  content: "\f044";
+}
+
+body main button.scrap::before {
+  font-family: FontAwe;
+  content: "\f058";
+}
+
+body main button.erase::before {
+  font-family: FontAwe;
+  content: "\f12d";
+}
+
+body main input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #f9f3ed;
+  border: #8cb6a6 2px solid;
+  margin-bottom: 1%;
+}
+
+body main .emptyAlert {
+  padding: 2%;
+}
+
+body main .hidden {
+  visibility: hidden;
+}
+
+body main .taskSection {
+  margin-top: 5%;
+}
+
+body main .taskSection .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+body main .taskInput {
+  color: grey;
+  cursor: auto;
+}
+
+body main .taskInput:not(:-moz-read-only) {
+  cursor: text;
+  color: #8cb6a6;
+  font-weight: 800;
+}
+
+body main .taskInput:not(:read-only) {
+  cursor: text;
+  color: #8cb6a6;
+  font-weight: 800;
+}
+
+body main .taskInput.done {
+  text-decoration: line-through;
+}
+
+body main .btns {
+  width: 30%;
+}
+/*# sourceMappingURL=style.css.map */

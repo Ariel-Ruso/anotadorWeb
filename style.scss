@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+//  palette
+$dark-blue: #8cb6a6;
+$dark-blue-transparent: rgba(0,
+109,
+119,
+0.068);
+$light-blue: #c0dcf4;
+$light: #f9f3ed;
+$light-pink: #ffa2b2;
+$dark-pink: #ce6979;
+@font-face {
+    font-family: FontAwe;
+    src: url(./assets/fontawesome-free-5.15.4-web/webfonts/fa-solid-900.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Permanent', 'san serif';
+    padding: 2%;
+    height: 100vh;
+    background-image: url('./assets/fondo.jpg');
+    background-size: 100%;
+    overflow: hidden;
+    h1,
+    {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    main {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        margin: 4%;
+        padding: 3% 4%;
+        button {
+            background-color: $dark-pink;
+            color: $light 2px solid;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 1%;
+            &:hover {
+                cursor: pointer;
+                background-color: $light-pink;
+                border: $light-pink 2px solid;
+            }
+            //descargar fawes
+            &.add::before {
+                font-family: FontAwe;
+                content: "\f055";
+            }
+            &.edit::before {
+                font-family: FontAwe;
+                content: "\f044";
+            }
+            &.scrap::before {
+                font-family: FontAwe;
+                content: "\f058";
+            }
+            &.erase::before {
+                font-family: FontAwe;
+                content: "\f12d";
+            }
+        }
+        input {
+            width: 60%;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            background-color: $light;
+            border: $dark-blue 2px solid;
+            margin-bottom: 1%;
+        }
+        .emptyAlert {
+            padding: 2%;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .taskSection {
+            margin-top: 5%;
+            .container {
+                display: flex;
+                width: 100%;
+            }
+        }
+        .taskInput {
+            color: grey;
+            cursor: auto;
+            &:not(:read-only) {
+                cursor: text;
+                color: $dark-blue;
+                font-weight: 800;
+            }
+            &.done {
+                text-decoration: line-through;
+            }
+        }
+        .btns {
+            width: 30%;
+        }
+    }
+}
